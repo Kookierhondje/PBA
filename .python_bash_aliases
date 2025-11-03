@@ -1,0 +1,20 @@
+# ~/.python_bash_aliases
+
+shopt -s expand_aliases
+# Some Python Ease of use Aliases. 
+alias py='python'
+alias dec='deactivate'
+alias pvn='python -m venv venv'
+alias pup='pip install --upgrade pip'
+vba() {
+    current_dir=$(pwd)
+    venv_activate="$current_dir/venv/bin/activate"
+    if [ -f "$venv_activate" ]; then
+        # Source the activate script
+        source "$venv_activate"
+        echo "Activated virtual environment in $current_dir/venv"
+    else
+        echo "No virtual environment found at $venv_activate "
+    fi
+}
+
