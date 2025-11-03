@@ -17,4 +17,5 @@ vba() {
         echo "No virtual environment found at $venv_activate "
     fi
 }
-
+alias bark='pip install -r requirements.txt'
+alias yip='vba && pup && bark'
